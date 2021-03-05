@@ -1,0 +1,51 @@
+import java.util.Scanner;
+class Main {
+  public static void main (String args[]) {
+     Scanner scan = new Scanner(System.in);
+  System.out.println("Welcome. What is your name?");
+  String name = scan.nextLine();
+  System.out.println("Hello " + name + ". Are you a teacher?");
+  String wouldYou = scan.nextLine();
+  wouldYou = wouldYou.toUpperCase();
+  String answer = "YES";
+
+   if(wouldYou.equals(answer)) {
+  System.out.println("\nTest 1\nEnter a 4 digit password:");
+  int firstDigit = scan.nextInt();
+  
+  if(firstDigit == 2100) {
+ System.out.println("Correct\n");
+ System.out.println("Test 2\nEnter a number:");
+ int secondDigit = scan.nextInt();
+    
+ if((secondDigit == 4) || (secondDigit >= 3) && ((secondDigit <= 6))) {
+ System.out.println("Correct\n");
+ System.out.println("Test 3\nEnter a number:");
+ int thirdDigit = scan.nextInt();
+      
+ if((thirdDigit > 0) && ((thirdDigit >3) || (thirdDigit == 4))) {
+ System.out.println("Correct!");
+ System.out.println("Welcome!");
+ }
+ else
+ System.out.println("Sorry, that was incorrect!\nPlease try again");
+ }
+ else
+ System.out.println("Sorry, that was incorrect!\nPlease try again");
+  }
+ else
+  System.out.println("Sorry, that was incorrect!\nPlease try again");
+  }
+    
+  }
+    
+  }
+  
+    This piece of code is meant to represent a prototype of what will be the login portion of my IA. 
+    A thought I had on hand was that it seemed difficult to find a way to set a new password constantly for each new teacher, so what if I made one they each had access to. 
+    In this code, teachers have to input three different digit passwords before they can move on, that way if a student responded "YES" to being a teacher, 
+    they'd be stopped by the needed passwords, and if any are failed, they are forced to either leave or try again. My plan is to use this on a much wider scale, 
+    setting similar tests up for individual classes, for example, Biology, English, Math, History, etc. Then set passwords that each teacher will have to answer before 
+    they can access the students grades, then I will set up a seperate test for students themselves to soley view.
+    
+    I benefited from some old pieces of code I solved awhile back and edited the format to fit my project, while avoiding direct use of copying.
